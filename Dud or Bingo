@@ -1,0 +1,30 @@
+// First C++ Code by Fazlemalak Chimthanawala
+# include <iostream>
+
+using namespace std;
+
+bool isNegativeMultipleOfEight(int number) {
+    return number < 0 &&
+    number % 8 == 0;
+}
+
+int main() {
+    int number;
+    char choice;8
+
+    do {
+        cout << "Please enter a number: ";
+        cin >> number;
+
+        if (isNegativeMultipleOfEight(number)) {
+            cout << "BINGO" << endl;
+        } else {
+            cout << "Dud" << endl;
+        }
+
+        cout << "Do you want to enter another number? (Y/N): ";
+        cin >> choice;
+    } while (toupper(choice) == 'Y');
+
+    return 0;
+}
